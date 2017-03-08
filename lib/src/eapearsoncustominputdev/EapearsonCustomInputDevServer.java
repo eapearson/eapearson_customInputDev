@@ -1,0 +1,79 @@
+package eapearsoncustominputdev;
+
+import java.io.File;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import us.kbase.auth.AuthToken;
+import us.kbase.common.service.JsonServerMethod;
+import us.kbase.common.service.JsonServerServlet;
+import us.kbase.common.service.JsonServerSyslog;
+import us.kbase.common.service.RpcContext;
+
+//BEGIN_HEADER
+//END_HEADER
+
+/**
+ * <p>Original spec-file module name: eapearson_customInputDev</p>
+ * <pre>
+ * A KBase module: eapearson_customInputDev
+ * </pre>
+ */
+public class EapearsonCustomInputDevServer extends JsonServerServlet {
+    private static final long serialVersionUID = 1L;
+    private static final String version = "0.0.1";
+    private static final String gitUrl = "";
+    private static final String gitCommitHash = "";
+
+    //BEGIN_CLASS_HEADER
+    //END_CLASS_HEADER
+
+    public EapearsonCustomInputDevServer() throws Exception {
+        super("eapearson_customInputDev");
+        //BEGIN_CONSTRUCTOR
+        //END_CONSTRUCTOR
+    }
+
+    /**
+     * <p>Original spec-file function name: validate_custom_input</p>
+     * <pre>
+     * </pre>
+     * @param   workspace   instance of String
+     * @param   param1   instance of String
+     * @param   param2   instance of type {@link eapearsoncustominputdev.CustomInputParams CustomInputParams}
+     * @return   parameter "result" of type {@link eapearsoncustominputdev.TestResults TestResults}
+     */
+    @JsonServerMethod(rpc = "eapearson_customInputDev.validate_custom_input", async=true)
+    public TestResults validateCustomInput(String workspace, String param1, CustomInputParams param2, AuthToken authPart, RpcContext jsonRpcContext) throws Exception {
+        TestResults returnVal = null;
+        //BEGIN validate_custom_input
+        //END validate_custom_input
+        return returnVal;
+    }
+    @JsonServerMethod(rpc = "eapearson_customInputDev.status")
+    public Map<String, Object> status() {
+        Map<String, Object> returnVal = null;
+        //BEGIN_STATUS
+        returnVal = new LinkedHashMap<String, Object>();
+        returnVal.put("state", "OK");
+        returnVal.put("message", "");
+        returnVal.put("version", version);
+        returnVal.put("git_url", gitUrl);
+        returnVal.put("git_commit_hash", gitCommitHash);
+        //END_STATUS
+        return returnVal;
+    }
+
+    public static void main(String[] args) throws Exception {
+        if (args.length == 1) {
+            new EapearsonCustomInputDevServer().startupServer(Integer.parseInt(args[0]));
+        } else if (args.length == 3) {
+            JsonServerSyslog.setStaticUseSyslog(false);
+            JsonServerSyslog.setStaticMlogFile(args[1] + ".log");
+            new EapearsonCustomInputDevServer().processRpcCall(new File(args[0]), new File(args[1]), args[2]);
+        } else {
+            System.out.println("Usage: <program> <server_port>");
+            System.out.println("   or: <program> <context_json_file> <output_json_file> <token>");
+            return;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "ver": "0.0.1",
+    "authors": [
+        "eapearson"
+    ],
+    "contact": "",
+    "categories": ["active"],
+    "app_type": "advanced_viewer",
+    "widgets": {
+        "input": null,
+        "output": "CustomOutputDemo"
+    },
+    "parameters": [ 
+        {
+            "id": "param1",
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "valid_ws_types": [ ]
+            }
+        },
+        {
+            "id": "param2",
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "custom",
+            "text_options": {
+                "valid_ws_types": [ ]
+            }
+        }
+    ],
+    "behavior": {
+        "service-mapping": {
+            "url": "",
+            "name": "eapearson_customInputDev",
+            "method": "validate_custom_input",
+            "input_mapping": [
+                {
+                    "narrative_system_variable": "workspace",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "param1",
+                    "target_argument_position": 1
+                },
+                {
+                    "input_parameter": "param2",
+                    "target_argument_position": 2
+                }
+            ],
+            "output_mapping": [
+                {
+                    "service_method_output_path": [0],
+                    "target_property": "output"
+                },
+                {
+                    "input_parameter": "param1",
+                    "target_property": "input"
+                },
+                {
+                    "input_parameter": "param2",
+                    "target_property": "input"
+                },
+                {
+                    "narrative_system_variable": "workspace",
+                    "target_property": "workspaceName"
+                }
+            ]
+        }
+    },
+    "job_id_output_field": "docker"
+}
