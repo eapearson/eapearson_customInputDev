@@ -13,6 +13,7 @@
     "parameters": [ 
         {
             "id": "param1",
+            "ui_class": "parameter",
             "optional": true,
             "advanced": false,
             "allow_multiple": false,
@@ -23,6 +24,7 @@
         },
         {
             "id": "param2",
+            "ui_class": "parameter",
             "optional": true,
             "advanced": false,
             "allow_multiple": false,
