@@ -56,16 +56,12 @@
             ],
             "output_mapping": [
                 {
-                    "service_method_output_path": [0],
-                    "target_property": "output"
-                },
-                {
                     "input_parameter": "param1",
-                    "target_property": "input"
+                    "target_property": "param1"
                 },
                 {
                     "input_parameter": "param2",
-                    "target_property": "input"
+                    "target_property": "param2"
                 },
                 {
                     "narrative_system_variable": "workspace",
