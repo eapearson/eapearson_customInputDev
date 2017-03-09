@@ -29,7 +29,7 @@
             "default_values": [ "" ],
             "field_type": "custom",
             "text_options": {
-                "type": "Pet"
+                "valid_ws_types": ["Pet"]
             }
         }
     ],

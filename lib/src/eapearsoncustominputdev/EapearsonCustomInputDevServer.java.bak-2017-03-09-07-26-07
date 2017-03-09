@@ -22,7 +22,7 @@ public class EapearsonCustomInputDevServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
     private static final String version = "0.0.1";
     private static final String gitUrl = "ssh://git@github.com/eapearson/eapearson_customInputDev";
-    private static final String gitCommitHash = "64dc891000eaf72efb770e9524b491799cde1261";
+    private static final String gitCommitHash = "2a0aa8cc143814ff436e861323ff721ed8098932";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER
