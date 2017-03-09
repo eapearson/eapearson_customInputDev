@@ -28,7 +28,7 @@
             "allow_multiple": false,
             "default_values": [ "" ],
             "field_type": "custom",
-            "custom_options": {
+            "text_options": {
                 "type": "Pet"
             }
         }
