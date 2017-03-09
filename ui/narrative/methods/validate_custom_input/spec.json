@@ -19,7 +19,6 @@
             "default_values": [ "" ],
             "field_type": "text",
             "text_options": {
-                "valid_ws_types": [ ]
             }
         },
         {
@@ -29,8 +28,8 @@
             "allow_multiple": false,
             "default_values": [ "" ],
             "field_type": "custom",
-            "text_options": {
-                "valid_ws_types": [ ]
+            "custom_options": {
+                "type": "Pet"
             }
         }
     ],

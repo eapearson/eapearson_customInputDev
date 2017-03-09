@@ -21,8 +21,8 @@ import us.kbase.common.service.RpcContext;
 public class EapearsonCustomInputDevServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
     private static final String version = "0.0.1";
-    private static final String gitUrl = "ssh://git@github.com/eapearson/eapearson_customInputDev";
-    private static final String gitCommitHash = "3462253a78e23a77c20c986ed683f4d499e22ccb";
+    private static final String gitUrl = "";
+    private static final String gitCommitHash = "";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER
