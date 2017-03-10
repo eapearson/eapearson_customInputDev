@@ -31,7 +31,7 @@
             "default_values": [ "" ],
             "field_type": "custom",
             "text_options": {
-                "valid_ws_types": ["Pet"]
+                "validate_as": "Pet"
             }
         }
     ],
